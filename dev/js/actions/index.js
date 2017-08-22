@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const pageRepo = (searchText) => {
       console.log("Inside action index.js");
-      var api_url = "https://graph.facebook.com/search?access_token=1973829529516418|43009bb9fd636ca211b389639201bbca&q="+searchText+"&type=page";
+      var api_url = "https://graph.facebook.com/search?access_token=app-id|app-secret&q="+searchText+"&type=page";
       return axios.get(api_url)
           .then(function(response){
               console.log("Data in action index.js"+JSON.stringify(response.data));
